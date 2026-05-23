@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(mkdir -p components/sections components/ui hooks lib public/images)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)"
+    ],
+    "additionalDirectories": [
+      "/Users/prashantbhandari/Personal/Work/Website/kasika-resturent/components"
+    ]
+  }
+}
