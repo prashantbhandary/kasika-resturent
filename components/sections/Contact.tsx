@@ -1,10 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Mail, ExternalLink, ShoppingBag } from "lucide-react";
+import { MapPin, Phone, Mail, ExternalLink, ShoppingBag } from "lucide-react";
 import { RESTAURANT_INFO } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function Contact() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section id="contact" className="py-24 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,13 +22,13 @@ export default function Contact() {
           className="text-center mb-14"
         >
           <p className="text-saffron text-xs tracking-[0.4em] uppercase font-semibold mb-3">
-            Find Us
+            {t.contact_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-charcoal mb-4">
-            Visit <span className="text-gradient">KASIKA</span>
+            {t.contact_title} <span className="text-gradient">{t.contact_title_highlight}</span>
           </h2>
           <p className="text-[#6b5740] max-w-xl mx-auto leading-relaxed">
-            We'd love to welcome you. Come in, sit down, and let us take you on a culinary journey.
+            {t.contact_description}
           </p>
         </motion.div>
 
@@ -39,27 +44,18 @@ export default function Contact() {
             {[
               {
                 icon: MapPin,
-                title: "Address",
+                title: t.contact_address,
                 lines: [RESTAURANT_INFO.address, RESTAURANT_INFO.addressEn],
               },
               {
                 icon: Phone,
-                title: "Phone",
-                lines: [RESTAURANT_INFO.phone, `Mobile: ${RESTAURANT_INFO.mobile}`],
+                title: t.contact_phone,
+                lines: [RESTAURANT_INFO.phone, `${t.contact_mobile_prefix} ${RESTAURANT_INFO.mobile}`],
               },
-              {
-                icon: Clock,
-                title: "Hours",
-                lines: [
-                  `Lunch: ${RESTAURANT_INFO.hours.lunch}`,
-                  `Dinner: ${RESTAURANT_INFO.hours.dinner}`,
-                  `Closed: ${RESTAURANT_INFO.hours.closed}`,
-                ],
-              },
-              {
+{
                 icon: Mail,
-                title: "Reservations",
-                lines: ["Call or visit us directly", "Walk-ins welcome"],
+                title: t.contact_reservations,
+                lines: [t.contact_call_visit, t.contact_walkins],
               },
             ].map(({ icon: Icon, title, lines }) => (
               <div
@@ -86,15 +82,15 @@ export default function Contact() {
                 <ShoppingBag size={16} className="text-charcoal" />
               </div>
               <div>
-                <p className="text-charcoal font-semibold mb-1 text-sm">Takeout & Delivery</p>
+                <p className="text-charcoal font-semibold mb-1 text-sm">{t.contact_takeout_title}</p>
                 <p className="text-[#6b5740] text-sm leading-relaxed">
-                  Hours: {RESTAURANT_INFO.takeout.hours}
+                  {t.contact_takeout_hours_prefix} {RESTAURANT_INFO.takeout.hours}
                 </p>
                 <p className="text-[#6b5740] text-sm leading-relaxed">
-                  {RESTAURANT_INFO.takeout.delivery}
+                  {t.contact_takeout_delivery}
                 </p>
                 <p className="text-[#6b5740] text-xs mt-1 leading-relaxed">
-                  {RESTAURANT_INFO.takeout.note}
+                  {t.contact_takeout_note}
                 </p>
               </div>
             </div>
@@ -106,53 +102,37 @@ export default function Contact() {
                 className="flex-1 inline-flex items-center justify-center gap-2 gold-gradient text-charcoal font-bold rounded-full py-3 text-sm shadow-md hover:opacity-90 transition-opacity"
               >
                 <Phone size={15} />
-                Call Now
+                {t.contact_call_now}
               </a>
               <a
-                href="https://maps.google.com/?q=埼玉県所沢市緑町4-15-20"
+                href="https://www.google.com/maps/dir/?api=1&destination=35.8058682,139.4475337&destination_place_id=ChIJ3eOxEPnfGGARc4aIapktQOg"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 inline-flex items-center justify-center gap-2 border border-brown text-brown hover:bg-brown hover:text-white rounded-full py-3 text-sm font-semibold transition-colors"
               >
                 <ExternalLink size={15} />
-                Get Directions
+                {t.contact_directions}
               </a>
             </div>
           </motion.div>
 
-          {/* Map placeholder */}
+          {/* Google Maps Embed */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#e8d5b7] h-full min-h-120 bg-[#f5ede0] flex flex-col items-center justify-center">
-              <div className="absolute inset-0 opacity-10">
-                <div className="w-full h-full grid grid-cols-8 grid-rows-8">
-                  {[...Array(64)].map((_, i) => (
-                    <div key={i} className="border border-brown/20" />
-                  ))}
-                </div>
-              </div>
-              <div className="relative z-10 text-center p-8">
-                <div className="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <MapPin size={28} className="text-charcoal" />
-                </div>
-                <h3 className="font-playfair text-brown text-xl font-bold mb-2">KASIKA</h3>
-                <p className="text-[#6b5740] text-sm mb-1">{RESTAURANT_INFO.address}</p>
-                <p className="text-[#6b5740] text-xs mb-6">Tokorozawa, Saitama</p>
-                <a
-                  href="https://maps.google.com/?q=埼玉県所沢市緑町4-15-20"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 gold-gradient text-charcoal font-semibold rounded-full px-6 py-3 text-sm shadow-md hover:opacity-90 transition-opacity"
-                >
-                  <ExternalLink size={14} />
-                  Open in Google Maps
-                </a>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-[#e8d5b7]/40 to-transparent" />
+            <div className="relative rounded-3xl overflow-hidden shadow-xl border border-[#e8d5b7] h-full min-h-120">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3235.758232911439!2d139.44753369999998!3d35.8058682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ddf910b1e3dd%3A0xe8402da96a4886f3!2sKASIka%20restaurent!5e0!3m2!1sen!2snp!4v1779560239131!5m2!1sen!2snp"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "480px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </motion.div>
         </div>

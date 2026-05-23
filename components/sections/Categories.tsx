@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CATEGORIES_FEATURED } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function Categories() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section className="py-24 bg-cream" id="categories">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,13 +23,13 @@ export default function Categories() {
           className="text-center mb-16"
         >
           <p className="text-saffron text-xs tracking-[0.4em] uppercase font-semibold mb-3">
-            Our Specialties
+            {t.cat_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-charcoal mb-4">
-            Explore Our <span className="text-gradient">Categories</span>
+            {t.cat_title} <span className="text-gradient">{t.cat_title_highlight}</span>
           </h2>
           <p className="text-[#6b5740] max-w-xl mx-auto leading-relaxed">
-            From tandoori classics to fragrant biryanis — discover an authentic culinary journey across India and Asia.
+            {t.cat_description}
           </p>
         </motion.div>
 
@@ -55,13 +60,13 @@ export default function Categories() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="text-gold text-xs tracking-[0.2em] uppercase mb-1">{cat.titleJa}</p>
                   <h3 className="font-playfair text-white text-2xl font-bold mb-1 group-hover:text-saffron transition-colors">
-                    {cat.title}
+                    {lang === "ja" ? cat.titleJa : cat.title}
                   </h3>
                   <p className="text-white/70 text-sm leading-snug line-clamp-1 mb-3">
                     {cat.description}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-saffron text-xs font-semibold tracking-wide opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    Explore <ArrowRight size={12} />
+                    {lang === "ja" ? "詳しく見る" : "Explore"} <ArrowRight size={12} />
                   </span>
                 </div>
               </a>

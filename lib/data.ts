@@ -24,9 +24,7 @@ export const RESTAURANT_INFO = {
     closed: "Tuesday",
   },
   takeout: {
-    hours: "11:00 – 22:00",
-    delivery: "Delivery available within 3km radius",
-    note: "Take out & delivery available during takeout hours",
+    hours: "11:00am – 22:30pm",
   },
   social: {
     instagram: "#",
@@ -71,7 +69,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 2,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&h=400&fit=crop",
   },
   {
     id: 2,
@@ -83,7 +81,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 2,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&h=400&fit=crop",
   },
   {
     id: 3,
@@ -94,7 +92,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Starters",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 4,
@@ -105,7 +103,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Starters",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&h=400&fit=crop",
   },
   {
     id: 5,
@@ -116,7 +114,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Starters",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc3ec?w=600&h=400&fit=crop",
   },
 
   // ─── CURRY ───────────────────────────────────────────────────────────────────
@@ -129,7 +127,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 1,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop",
   },
   {
     id: 11,
@@ -140,7 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 1,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop",
   },
   {
     id: 12,
@@ -151,7 +149,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1627662239709-ef777065e49e?w=600&h=400&fit=crop",
   },
   {
     id: 13,
@@ -162,7 +160,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop",
   },
   {
     id: 14,
@@ -174,7 +172,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 1,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1585238341710-4abb7692fc0b?w=600&h=400&fit=crop",
   },
   {
     id: 15,
@@ -185,7 +183,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 3,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc3ec?w=600&h=400&fit=crop",
   },
   {
     id: 16,
@@ -196,7 +194,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc3ec?w=600&h=400&fit=crop",
   },
   {
     id: 17,
@@ -207,7 +205,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop",
   },
   {
     id: 18,
@@ -218,7 +216,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Curry",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&h=400&fit=crop",
   },
 
   // ─── BIRYANI ─────────────────────────────────────────────────────────────────
@@ -232,7 +230,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 2,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1563379091339-03246963d60e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1589985643960-6fe2d67ec22f?w=600&h=400&fit=crop",
   },
   {
     id: 21,
@@ -243,7 +241,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Biryani",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1563379091339-03246963d60e?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1589985643960-6fe2d67ec22f?w=600&h=400&fit=crop",
   },
   {
     id: 22,
@@ -254,7 +252,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Biryani",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop",
   },
   {
     id: 23,
@@ -265,7 +263,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Biryani",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop",
   },
 
   // ─── RICE & ASIAN ─────────────────────────────────────────────────────────────
@@ -278,7 +276,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 0,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b0?w=600&h=400&fit=crop",
   },
   {
     id: 31,
@@ -290,7 +288,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop",
   },
   {
     id: 32,
@@ -301,7 +299,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 0,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b0?w=600&h=400&fit=crop",
   },
   {
     id: 33,
@@ -312,7 +310,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b0?w=600&h=400&fit=crop",
   },
   {
     id: 34,
@@ -323,7 +321,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b0?w=600&h=400&fit=crop",
   },
   {
     id: 35,
@@ -334,7 +332,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 36,
@@ -346,7 +344,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 1,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 37,
@@ -357,7 +355,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 38,
@@ -368,7 +366,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Rice & Asian",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 39,
@@ -380,7 +378,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 2,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&h=400&fit=crop",
   },
 
   // ─── SET MEALS ────────────────────────────────────────────────────────────────
@@ -393,7 +391,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 51,
@@ -405,7 +403,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 1,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 52,
@@ -416,7 +414,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 53,
@@ -427,7 +425,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 54,
@@ -438,7 +436,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 55,
@@ -449,7 +447,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 2,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&h=400&fit=crop",
   },
   {
     id: 56,
@@ -461,7 +459,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 1,
     isVeg: false,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 57,
@@ -472,7 +470,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 1,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 58,
@@ -483,7 +481,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Set Meals",
     spice: 0,
     isVeg: false,
-    image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
   },
   {
     id: 59,
@@ -552,7 +550,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 71,
@@ -564,7 +562,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: true,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 72,
@@ -575,7 +573,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1533134242443-742ce60857f9?w=600&h=400&fit=crop",
   },
   {
     id: 73,
@@ -586,7 +584,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1553530666-ba2a8e36c8fe?w=600&h=400&fit=crop",
   },
   {
     id: 74,
@@ -597,7 +595,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 75,
@@ -608,7 +606,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1533134242443-742ce60857f9?w=600&h=400&fit=crop",
   },
   {
     id: 76,
@@ -619,7 +617,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1554866585-575d7ea2fbf7?w=600&h=400&fit=crop",
   },
   {
     id: 77,
@@ -630,7 +628,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1597318373768-47a9fbf69aeb?w=600&h=400&fit=crop",
   },
   {
     id: 78,
@@ -641,7 +639,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1597318373768-47a9fbf69aeb?w=600&h=400&fit=crop",
   },
   {
     id: 79,
@@ -652,7 +650,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 1,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1544432415-c0a63c35d31f?w=600&h=400&fit=crop",
   },
   {
     id: 80,
@@ -663,7 +661,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1495521826927-30cbf565b904?w=600&h=400&fit=crop",
   },
   {
     id: 81,
@@ -674,7 +672,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1600271886742-f049cd1f5103?w=600&h=400&fit=crop",
   },
   {
     id: 82,
@@ -685,7 +683,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1554866585-575d7ea2fbf7?w=600&h=400&fit=crop",
   },
   {
     id: 83,
@@ -696,7 +694,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soft Drinks",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1554866585-575d7ea2fbf7?w=600&h=400&fit=crop",
   },
 
   // ─── BEER & SOUR ─────────────────────────────────────────────────────────────
@@ -710,7 +708,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: true,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 91,
@@ -721,7 +719,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 92,
@@ -732,7 +730,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 93,
@@ -743,7 +741,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 94,
@@ -754,7 +752,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 95,
@@ -765,7 +763,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 96,
@@ -776,7 +774,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 97,
@@ -787,7 +785,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 98,
@@ -799,7 +797,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: true,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 99,
@@ -810,7 +808,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 100,
@@ -821,7 +819,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
   {
     id: 101,
@@ -832,7 +830,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 102,
@@ -844,7 +842,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: true,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 103,
@@ -855,7 +853,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 104,
@@ -866,7 +864,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 105,
@@ -877,7 +875,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 106,
@@ -888,7 +886,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 107,
@@ -899,7 +897,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583969212155-72933dcb0c91?w=600&h=400&fit=crop",
   },
   {
     id: 108,
@@ -910,7 +908,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583969212155-72933dcb0c91?w=600&h=400&fit=crop",
   },
   {
     id: 109,
@@ -921,7 +919,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583969212155-72933dcb0c91?w=600&h=400&fit=crop",
   },
   {
     id: 110,
@@ -932,7 +930,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 111,
@@ -943,7 +941,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 112,
@@ -954,7 +952,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 113,
@@ -965,7 +963,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 114,
@@ -976,7 +974,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Beer & Sour",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1618183479302-1461ae109846?w=600&h=400&fit=crop",
   },
 
   // ─── COCKTAILS & SPIRITS ─────────────────────────────────────────────────────
@@ -989,7 +987,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 121,
@@ -1001,7 +999,7 @@ export const MENU_ITEMS: MenuItem[] = [
     spice: 0,
     isVeg: true,
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=400&fit=crop",
   },
   {
     id: 122,
@@ -1012,7 +1010,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583969212155-72933dcb0c91?w=600&h=400&fit=crop",
   },
   {
     id: 123,
@@ -1023,7 +1021,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1583969212155-72933dcb0c91?w=600&h=400&fit=crop",
   },
   {
     id: 124,
@@ -1034,7 +1032,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop",
   },
   {
     id: 125,
@@ -1045,7 +1043,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=600&h=400&fit=crop",
   },
   {
     id: 126,
@@ -1056,7 +1054,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=600&h=400&fit=crop",
   },
   {
     id: 127,
@@ -1067,7 +1065,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 128,
@@ -1078,7 +1076,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 129,
@@ -1089,7 +1087,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 130,
@@ -1100,7 +1098,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 131,
@@ -1111,7 +1109,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 132,
@@ -1122,7 +1120,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 133,
@@ -1133,7 +1131,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 134,
@@ -1144,7 +1142,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 135,
@@ -1155,7 +1153,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 136,
@@ -1166,7 +1164,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 137,
@@ -1177,7 +1175,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1608270861620-7a8e3e10b574?w=600&h=400&fit=crop",
   },
   {
     id: 138,
@@ -1188,7 +1186,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Cocktails & Spirits",
     spice: 0,
     isVeg: true,
-    image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1533134242443-742ce60857f9?w=600&h=400&fit=crop",
   },
 ];
 

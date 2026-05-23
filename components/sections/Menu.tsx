@@ -4,8 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Flame, Leaf } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { MENU_CATEGORIES, MENU_ITEMS, type MenuItem } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
+import { useT, CATEGORY_TAB_KEY } from "@/lib/translations";
 
 function SpiceLevel({ level }: { level: 0 | 1 | 2 | 3 }) {
   return (
@@ -21,7 +22,8 @@ function SpiceLevel({ level }: { level: 0 | 1 | 2 | 3 }) {
   );
 }
 
-function MenuCard({ item }: { item: MenuItem }) {
+function MenuCard({ item, lang }: { item: MenuItem; lang: "en" | "ja" }) {
+  const t = useT(lang);
   return (
     <motion.div
       layout
@@ -39,20 +41,19 @@ function MenuCard({ item }: { item: MenuItem }) {
           className="object-cover transition-transform duration-600 group-hover:scale-108"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-        {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-1.5">
           {item.isVeg ? (
             <span className="flex items-center gap-1 bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-              <Leaf size={9} /> VEG
+              <Leaf size={9} /> {t.menu_veg}
             </span>
           ) : (
             <span className="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-              NON-VEG
+              {t.menu_nonveg}
             </span>
           )}
           {item.isSignature && (
             <span className="bg-[#E6A817] text-[#1A1A1A] text-[10px] font-bold px-2 py-0.5 rounded-full">
-              ★ CHEF'S PICK
+              {t.menu_chef_pick}
             </span>
           )}
         </div>
@@ -61,9 +62,9 @@ function MenuCard({ item }: { item: MenuItem }) {
         <div className="flex items-start justify-between gap-2 mb-1">
           <div>
             <h4 className="font-playfair text-[#1A1A1A] font-semibold text-base leading-tight">
-              {item.name}
+              {lang === "ja" && item.nameJa ? item.nameJa : item.name}
             </h4>
-            {item.nameJa && (
+            {item.nameJa && lang === "en" && (
               <p className="text-[#E6A817] text-xs mt-0.5">{item.nameJa}</p>
             )}
           </div>
@@ -82,6 +83,9 @@ function MenuCard({ item }: { item: MenuItem }) {
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("Curry");
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   const filtered = MENU_ITEMS.filter((item) => item.category === activeCategory);
 
   return (
@@ -96,31 +100,35 @@ export default function Menu() {
           className="text-center mb-14"
         >
           <p className="text-[#E6A817] text-xs tracking-[0.4em] uppercase font-semibold mb-3">
-            Our Menu
+            {t.menu_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4">
-            Signature <span className="text-gradient">Dishes</span>
+            {t.menu_title} <span className="text-gradient">{t.menu_title_highlight}</span>
           </h2>
           <p className="text-[#6b5740] max-w-xl mx-auto leading-relaxed">
-            Each dish is crafted with hand-selected spices imported from India, prepared fresh daily by our master chefs.
+            {t.menu_description}
           </p>
         </motion.div>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
-          {MENU_CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === cat
-                  ? "gold-gradient text-[#1A1A1A] shadow-md scale-105"
-                  : "bg-white text-[#4A2C1A] border border-[#e8d5b7] hover:border-saffron hover:text-saffron"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {MENU_CATEGORIES.map((cat) => {
+            const labelKey = CATEGORY_TAB_KEY[cat];
+            const label = labelKey ? t[labelKey] : cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeCategory === cat
+                    ? "gold-gradient text-[#1A1A1A] shadow-md scale-105"
+                    : "bg-white text-[#4A2C1A] border border-[#e8d5b7] hover:border-saffron hover:text-saffron"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
         </div>
 
         {/* Menu Grid */}
@@ -134,7 +142,7 @@ export default function Menu() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {filtered.map((item) => (
-              <MenuCard key={item.id} item={item} />
+              <MenuCard key={item.id} item={item} lang={lang} />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -147,12 +155,12 @@ export default function Menu() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center mt-12"
         >
-          <p className="text-[#6b5740] text-sm mb-4">Interested in our full menu?</p>
+          <p className="text-[#6b5740] text-sm mb-4">{t.menu_cta_text}</p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 text-[#E6A817] font-semibold border-b border-saffron pb-0.5 hover:gap-3 transition-all"
           >
-            Contact us for the complete menu
+            {t.menu_cta_link}
           </a>
         </motion.div>
       </div>

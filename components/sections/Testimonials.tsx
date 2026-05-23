@@ -11,8 +11,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { TESTIMONIALS } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function Testimonials() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section className="py-24 bg-[#fef3e2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,13 +30,13 @@ export default function Testimonials() {
           className="text-center mb-14"
         >
           <p className="text-[#E6A817] text-xs tracking-[0.4em] uppercase font-semibold mb-3">
-            Testimonials
+            {t.test_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4">
-            What Our Guests <span className="text-gradient">Say</span>
+            {t.test_title} <span className="text-gradient">{t.test_title_highlight}</span>
           </h2>
           <p className="text-[#6b5740] max-w-xl mx-auto leading-relaxed">
-            Real stories from our beloved guests who have experienced the warmth of KASIKA.
+            {t.test_description}
           </p>
         </motion.div>
 

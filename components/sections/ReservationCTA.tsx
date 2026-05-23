@@ -4,8 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone, CalendarDays } from "lucide-react";
 import { RESTAURANT_INFO } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function ReservationCTA() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Background */}
@@ -34,48 +39,30 @@ export default function ReservationCTA() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-saffron text-xs tracking-[0.5em] uppercase font-semibold mb-4">
-            Reservations
+            {t.res_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-            Reserve Your <span className="text-gradient">Dining</span><br />
-            Experience
+            {t.res_title1} <span className="text-gradient">{t.res_title_highlight}</span><br />
+            {t.res_title2}
           </h2>
           <p className="text-white/60 text-base max-w-xl mx-auto leading-relaxed mb-10">
-            Whether it's an intimate dinner for two or a celebration with family — we curate an unforgettable experience for every occasion.
+            {t.res_description}
           </p>
 
-          {/* Hours */}
-          <div className="inline-flex flex-wrap justify-center gap-6 mb-10 glass-dark rounded-2xl px-8 py-5">
-            <div className="text-center">
-              <p className="text-saffron text-xs uppercase tracking-widest mb-1">Lunch</p>
-              <p className="text-white font-medium text-sm">{RESTAURANT_INFO.hours.lunch}</p>
-            </div>
-            <div className="w-px bg-white/10" />
-            <div className="text-center">
-              <p className="text-saffron text-xs uppercase tracking-widest mb-1">Dinner</p>
-              <p className="text-white font-medium text-sm">{RESTAURANT_INFO.hours.dinner}</p>
-            </div>
-            <div className="w-px bg-white/10" />
-            <div className="text-center">
-              <p className="text-saffron text-xs uppercase tracking-widest mb-1">Closed</p>
-              <p className="text-white font-medium text-sm">{RESTAURANT_INFO.hours.closed}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
               className="inline-flex items-center gap-2 gold-gradient text-charcoal font-bold px-8 py-4 rounded-full text-base shadow-xl hover:opacity-90 transition-all hover:scale-105"
             >
               <CalendarDays size={18} />
-              Book a Table
+              {t.res_book}
             </a>
             <a
               href={`tel:${RESTAURANT_INFO.phone}`}
               className="inline-flex items-center gap-2 border border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full text-base transition-all hover:scale-105"
             >
               <Phone size={18} />
-              Call Restaurant
+              {t.res_call}
             </a>
           </div>
         </motion.div>

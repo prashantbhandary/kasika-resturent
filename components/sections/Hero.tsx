@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Star, ChevronDown } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function Hero() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -42,7 +47,7 @@ export default function Hero() {
           <div className="glass-dark rounded-full px-5 py-2 flex items-center gap-2">
             <Star size={14} className="text-saffron fill-saffron" />
             <span className="text-white/90 text-xs tracking-[0.2em] uppercase font-medium">
-              5% OFF · Dinner Time Only · Members
+              {t.hero_badge}
             </span>
             <Star size={14} className="text-saffron fill-saffron" />
           </div>
@@ -55,7 +60,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <p className="text-saffron text-sm tracking-[0.5em] uppercase mb-3 font-medium">
-            Asian Dining Indo Bar
+            {t.hero_asian_dining}
           </p>
           <h1 className="font-playfair text-[clamp(4rem,12vw,9rem)] font-bold text-white leading-none tracking-wider mb-4">
             KASIKA
@@ -69,7 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
           className="text-white/80 text-[clamp(1rem,2.5vw,1.3rem)] font-light tracking-wide max-w-2xl mx-auto mb-4 leading-relaxed"
         >
-          Authentic Indian &amp; Asian Dining Experience
+          {t.hero_tagline}
         </motion.p>
 
         <motion.p
@@ -78,8 +83,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           className="text-white/60 text-sm max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          Where the warmth of Indian spices meets the elegance of Japanese minimalism —
-          a culinary journey across Asia, right here in Tokorozawa.
+          {t.hero_description}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -93,13 +97,13 @@ export default function Hero() {
             href="#menu"
             className="gold-gradient text-charcoal font-semibold px-8 py-4 rounded-full text-base shadow-xl hover:opacity-90 transition-all hover:scale-105 inline-flex items-center"
           >
-            View Menu
+            {t.hero_view_menu}
           </a>
           <a
             href="#contact"
             className="border border-white/40 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full text-base transition-all hover:scale-105 inline-flex items-center"
           >
-            Reserve Table
+            {t.hero_reserve}
           </a>
         </motion.div>
 
@@ -123,7 +127,7 @@ export default function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40"
       >
-        <span className="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase">{t.hero_scroll}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

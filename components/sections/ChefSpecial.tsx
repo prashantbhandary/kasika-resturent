@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Star, Award } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
+import { useT } from "@/lib/translations";
 
 export default function ChefSpecial() {
+  const { lang } = useLanguage();
+  const t = useT(lang);
+
   return (
     <section id="about" className="py-24 bg-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,8 +46,8 @@ export default function ChefSpecial() {
                   <Award size={18} className="text-charcoal" />
                 </div>
                 <div>
-                  <p className="text-charcoal font-bold text-sm">Chef's Signature</p>
-                  <p className="text-saffron text-xs font-medium">Butter Chicken Set</p>
+                  <p className="text-charcoal font-bold text-sm">{t.chef_award_label}</p>
+                  <p className="text-saffron text-xs font-medium">{t.chef_award_dish}</p>
                 </div>
               </div>
             </motion.div>
@@ -60,8 +65,8 @@ export default function ChefSpecial() {
                   <Star key={i} size={14} className="text-saffron fill-saffron" />
                 ))}
               </div>
-              <p className="text-charcoal text-sm font-semibold">5.0 Rating</p>
-              <p className="text-[#6b5740] text-xs">200+ Reviews</p>
+              <p className="text-charcoal text-sm font-semibold">{t.chef_rating}</p>
+              <p className="text-[#6b5740] text-xs">{t.chef_reviews}</p>
             </motion.div>
           </motion.div>
 
@@ -75,28 +80,23 @@ export default function ChefSpecial() {
           >
             <div>
               <p className="text-saffron text-xs tracking-[0.4em] uppercase font-semibold mb-3">
-                Our Story
+                {t.chef_eyebrow}
               </p>
               <h2 className="font-playfair text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
-                Crafted with <span className="text-gradient">Passion</span>,<br />
-                Served with <span className="text-gradient">Love</span>
+                {t.chef_title} <span className="text-gradient">{t.chef_title_highlight1}</span>,<br />
+                {t.chef_title_join} <span className="text-gradient">{t.chef_title_highlight2}</span>
               </h2>
             </div>
 
-            <p className="text-[#6b5740] leading-relaxed text-base">
-              KASIKA was born from a deep love of Indian culinary heritage and the desire to bring authentic flavors to Japan. Founded by Devi Lal, each recipe carries the soul of generations — spices ground by hand, sauces slow-cooked for hours, and every dish plated with intention.
-            </p>
-
-            <p className="text-[#6b5740] leading-relaxed text-base">
-              We source our spices directly from India — saffron from Kashmir, cardamom from Kerala, cumin from Rajasthan. Combined with the finest local Japanese ingredients, the result is a dining experience that bridges two culinary worlds.
-            </p>
+            <p className="text-[#6b5740] leading-relaxed text-base">{t.chef_desc1}</p>
+            <p className="text-[#6b5740] leading-relaxed text-base">{t.chef_desc2}</p>
 
             {/* Highlights */}
             <div className="grid grid-cols-3 gap-4 pt-2">
               {[
-                { label: "Authentic\nRecipes", value: "50+" },
-                { label: "Fresh\nIngredients", value: "100%" },
-                { label: "Years of\nExperience", value: "10+" },
+                { label: t.chef_stat_recipes, value: "50+" },
+                { label: t.chef_stat_ingredients, value: "100%" },
+                { label: t.chef_stat_years, value: "10+" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center p-4 bg-white rounded-2xl border border-[#e8d5b7] shadow-sm">
                   <p className="font-playfair text-3xl font-bold text-gradient mb-1">
@@ -116,13 +116,11 @@ export default function ChefSpecial() {
                   <Star size={14} className="text-charcoal fill-charcoal" />
                 </div>
                 <div>
-                  <p className="text-charcoal font-semibold text-sm">Today's Chef Special</p>
-                  <p className="text-saffron text-xs">Butter Chicken Set – ¥950</p>
+                  <p className="text-charcoal font-semibold text-sm">{t.chef_today_special}</p>
+                  <p className="text-saffron text-xs">{t.chef_special_subtitle}</p>
                 </div>
               </div>
-              <p className="text-[#6b5740] text-sm leading-relaxed">
-                Our most recommended set — creamy Butter Chicken curry with salad, your choice of Nan or Rice, and a soft drink. Rich, aromatic, and perfect for every visit.
-              </p>
+              <p className="text-[#6b5740] text-sm leading-relaxed">{t.chef_special_desc}</p>
             </div>
 
             <div className="flex gap-4 pt-2">
@@ -130,13 +128,13 @@ export default function ChefSpecial() {
                 href="#menu"
                 className="gold-gradient text-charcoal font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity inline-flex items-center text-sm"
               >
-                View Full Menu
+                {t.chef_view_menu}
               </a>
               <a
                 href="#contact"
                 className="border border-brown text-brown px-6 py-3 rounded-full hover:bg-brown hover:text-white transition-colors inline-flex items-center text-sm font-semibold"
               >
-                Reserve Table
+                {t.chef_reserve}
               </a>
             </div>
           </motion.div>
