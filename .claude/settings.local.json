@@ -4,7 +4,17 @@
       "Bash(npm install *)",
       "Bash(mkdir -p components/sections components/ui hooks lib public/images)",
       "Bash(npx tsc *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(pdftotext --version)",
+      "Bash(python3 -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(python3 -c \"import PyPDF2; print\\('PyPDF2 ok'\\)\")",
+      "Bash(python3 -c \"import pdfminer; print\\('pdfminer ok'\\)\")",
+      "Bash(brew list *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"from pdf2image import convert_from_path; print\\('ok'\\)\")",
+      "Bash(/opt/homebrew/bin/brew install *)",
+      "Bash(/usr/local/bin/brew install *)"
     ],
     "additionalDirectories": [
       "/Users/prashantbhandari/Personal/Work/Website/kasika-resturent/components"

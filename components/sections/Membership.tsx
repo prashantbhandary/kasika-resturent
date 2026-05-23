@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Tag, Clock, Gift } from "lucide-react";
+import { Star, Tag, Clock, Gift, Check, Users } from "lucide-react";
+import { PARTY_COURSES } from "@/lib/data";
 
 export default function Membership() {
   return (
@@ -114,6 +115,101 @@ export default function Membership() {
               </a>
             </div>
           </div>
+        </motion.div>
+
+        {/* Party Menu */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+          className="mt-20"
+        >
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <Users size={16} className="text-saffron" />
+              <p className="text-saffron text-xs tracking-[0.4em] uppercase font-semibold">
+                Group Dining
+              </p>
+            </div>
+            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-charcoal mb-3">
+              Party <span className="text-gradient">Menu</span>
+            </h3>
+            <p className="text-[#6b5740] max-w-lg mx-auto text-sm leading-relaxed">
+              パーティーメニュー — Perfect for groups, celebrations, and special occasions. All courses include freshly baked Nan and one choice of curry.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {PARTY_COURSES.map((course, i) => (
+              <motion.div
+                key={course.label}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className={`relative bg-white rounded-3xl p-6 border shadow-sm hover:shadow-xl transition-shadow duration-400 ${
+                  course.isPopular
+                    ? "border-saffron shadow-md"
+                    : "border-[#e8d5b7]"
+                }`}
+              >
+                {course.isPopular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="gold-gradient text-charcoal text-[10px] font-bold px-4 py-1 rounded-full shadow">
+                      ★ MOST POPULAR
+                    </span>
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <p className="text-saffron text-xs tracking-[0.3em] uppercase font-semibold mb-1">
+                    {course.labelJa}
+                  </p>
+                  <h4 className="font-playfair text-charcoal text-2xl font-bold">
+                    {course.label}
+                  </h4>
+                  <div className="flex items-baseline gap-2 mt-2">
+                    <span className="font-playfair text-3xl font-bold text-gradient">
+                      {course.price}
+                    </span>
+                    <span className="text-[#6b5740] text-xs">/ person</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <Clock size={11} className="text-[#6b5740]" />
+                    <span className="text-[#6b5740] text-xs">{course.duration}</span>
+                  </div>
+                </div>
+
+                <div className="h-px bg-[#e8d5b7] mb-4" />
+
+                <ul className="space-y-2 mb-4">
+                  {course.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check size={13} className="text-saffron mt-0.5 shrink-0" />
+                      <span className="text-[#6b5740] text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {course.drinkNote && (
+                  <div className="bg-[#fef3e2] border border-[#e8d5b7] rounded-xl p-3">
+                    <p className="text-[#6b5740] text-xs leading-relaxed">
+                      🍺 {course.drinkNote}
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <p className="text-center text-[#6b5740] text-xs mt-6">
+            Reservations required for party courses · Please call{" "}
+            <a href="tel:04-2937-4758" className="text-saffron font-semibold hover:underline">
+              04-2937-4758
+            </a>{" "}
+            to book
+          </p>
         </motion.div>
       </div>
     </section>

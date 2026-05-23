@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Mail, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, ExternalLink, ShoppingBag } from "lucide-react";
 import { RESTAURANT_INFO } from "@/lib/data";
 
 export default function Contact() {
@@ -79,6 +79,25 @@ export default function Contact() {
                 </div>
               </div>
             ))}
+
+            {/* Takeout & Delivery */}
+            <div className="bg-[#fef3e2] border border-[#e8d5b7] rounded-2xl p-5 flex items-start gap-4">
+              <div className="w-10 h-10 gold-gradient rounded-xl flex items-center justify-center shrink-0 mt-0.5">
+                <ShoppingBag size={16} className="text-charcoal" />
+              </div>
+              <div>
+                <p className="text-charcoal font-semibold mb-1 text-sm">Takeout & Delivery</p>
+                <p className="text-[#6b5740] text-sm leading-relaxed">
+                  Hours: {RESTAURANT_INFO.takeout.hours}
+                </p>
+                <p className="text-[#6b5740] text-sm leading-relaxed">
+                  {RESTAURANT_INFO.takeout.delivery}
+                </p>
+                <p className="text-[#6b5740] text-xs mt-1 leading-relaxed">
+                  {RESTAURANT_INFO.takeout.note}
+                </p>
+              </div>
+            </div>
 
             {/* CTA buttons */}
             <div className="flex gap-3 pt-2">

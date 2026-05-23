@@ -42,7 +42,7 @@ export default function ChefSpecial() {
                 </div>
                 <div>
                   <p className="text-charcoal font-bold text-sm">Chef's Signature</p>
-                  <p className="text-saffron text-xs font-medium">Lamb Rogan Josh</p>
+                  <p className="text-saffron text-xs font-medium">Butter Chicken Set</p>
                 </div>
               </div>
             </motion.div>
@@ -117,11 +117,11 @@ export default function ChefSpecial() {
                 </div>
                 <div>
                   <p className="text-charcoal font-semibold text-sm">Today's Chef Special</p>
-                  <p className="text-saffron text-xs">Lamb Rogan Josh – Kashmiri Style</p>
+                  <p className="text-saffron text-xs">Butter Chicken Set – ¥950</p>
                 </div>
               </div>
               <p className="text-[#6b5740] text-sm leading-relaxed">
-                Tender lamb slow-braised for 4 hours in a fragrant blend of Kashmiri red chilies, whole spices, and creamy yogurt. A dish that speaks of winter mountains and ancient royal kitchens.
+                Our most recommended set — creamy Butter Chicken curry with salad, your choice of Nan or Rice, and a soft drink. Rich, aromatic, and perfect for every visit.
               </p>
             </div>
 
