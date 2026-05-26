@@ -14,7 +14,11 @@
       "Bash(python3 -)",
       "Bash(python3 -c \"from pdf2image import convert_from_path; print\\('ok'\\)\")",
       "Bash(/opt/homebrew/bin/brew install *)",
-      "Bash(/usr/local/bin/brew install *)"
+      "Bash(/usr/local/bin/brew install *)",
+      "Bash(grep -E \"^\\(AGENTS|CLAUDE\\)\\\\.md$\")",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ],
     "additionalDirectories": [
       "/Users/prashantbhandari/Personal/Work/Website/kasika-resturent/components"
