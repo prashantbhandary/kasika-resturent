@@ -1345,63 +1345,63 @@ export const TESTIMONIALS = [
 // ─── GALLERY IMAGES ───────────────────────────────────────────────────────────
 export const GALLERY_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
-    alt: "Indian Curry",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80",
-    alt: "Tandoori Chicken",
+    src: "/images/gallery-storefront.jpg",
+    alt: "Our Storefront",
     aspect: "wide",
   },
   {
-    src: "https://images.unsplash.com/photo-1563379091339-03246963d60e?w=600&q=80",
-    alt: "Chicken Biryani",
+    src: "/images/gallery-evening.jpg",
+    alt: "Evening at KASIKA",
     aspect: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=80",
-    alt: "Curry Set Meal",
-    aspect: "short",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
-    alt: "Asian Dishes",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80",
-    alt: "Starters Platter",
-    aspect: "short",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80",
-    alt: "Mango Lassi",
-    aspect: "tall",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80",
-    alt: "Chicken Tikka",
+    src: "/images/gallery-dining-hall.jpg",
+    alt: "Dining Hall",
     aspect: "wide",
   },
   {
-    src: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80",
-    alt: "Biryani Spread",
+    src: "/images/gallery-booth.jpg",
+    alt: "Cosy Booth Seating",
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery-bar-stocked.jpg",
+    alt: "Fully Stocked Bar",
     aspect: "short",
   },
   {
-    src: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80",
-    alt: "Dal Curry",
+    src: "/images/gallery-lunch-menu.jpg",
+    alt: "Lunch Set Menu",
     aspect: "tall",
   },
   {
-    src: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80",
-    alt: "Bar & Drinks",
+    src: "/images/gallery-bar.jpg",
+    alt: "The Bar",
     aspect: "short",
   },
   {
-    src: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80",
-    alt: "Set Meal Spread",
+    src: "/images/gallery-welcome.jpg",
+    alt: "Welcome — Irasshaimase",
+    aspect: "tall",
+  },
+  {
+    src: "/images/gallery-whisky.jpg",
+    alt: "Whisky & Spirits",
     aspect: "wide",
+  },
+  {
+    src: "/images/gallery-curry-set.jpg",
+    alt: "Curry Set ¥700~",
+    aspect: "tall",
+  },
+  {
+    src: "/images/gallery-entrance.jpg",
+    alt: "Step Inside",
+    aspect: "wide",
+  },
+  {
+    src: "/images/gallery-drinks.jpg",
+    alt: "Drinks Selection",
+    aspect: "short",
   },
 ];

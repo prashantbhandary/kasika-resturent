@@ -16,7 +16,7 @@ export default function ReservationCTA() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=85"
+          src="/images/reservation-facade.jpg"
           alt="KASIKA dining atmosphere"
           fill
           className="object-cover"

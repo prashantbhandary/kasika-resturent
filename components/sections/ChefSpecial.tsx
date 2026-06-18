@@ -24,7 +24,7 @@ export default function ChefSpecial() {
           >
             <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=900&q=90"
+                src="/images/about-booth.jpg"
                 alt="Chef's Special – KASIKA"
                 fill
                 className="object-cover"

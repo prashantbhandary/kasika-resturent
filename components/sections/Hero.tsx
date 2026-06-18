@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=90"
+          src="/images/hero-interior.jpg"
           alt="KASIKA Restaurant – Premium Indian Dining"
           fill
           priority
