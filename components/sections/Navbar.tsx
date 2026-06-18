@@ -126,15 +126,14 @@ export default function Navbar() {
           </button>
 
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-            <SheetTrigger>
-              <button
-                className={cn(
-                  "p-2 rounded-lg transition-colors",
-                  scrolled ? "text-[#4A2C1A]" : "text-white"
-                )}
-              >
-                <Menu size={24} />
-              </button>
+            <SheetTrigger
+              className={cn(
+                "p-2 rounded-lg transition-colors",
+                scrolled ? "text-[#4A2C1A]" : "text-white"
+              )}
+              aria-label="Open menu"
+            >
+              <Menu size={24} />
             </SheetTrigger>
             <SheetContent side="right" className="bg-[#FFF9F1] border-l border-[#e8d5b7] w-80 p-0">
               <div className="flex flex-col h-full">
