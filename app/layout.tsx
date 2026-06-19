@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
 
-const playfair = Playfair_Display({
+// Display face: Fraunces — a warm soft-serif with real character at large sizes.
+// Registered under --font-playfair so existing `font-playfair` utilities adopt it.
+const playfair = Fraunces({
   variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({

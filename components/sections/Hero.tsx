@@ -26,13 +26,29 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-black/20" />
       </div>
 
-      {/* Floating spice decorations */}
+      {/* Drifting embers — ambient spice-smoke rising from the kitchen */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="float-anim absolute w-16 h-16 rounded-full border border-saffron/30" style={{ top: "20%", left: "8%" }} />
-        <div className="float-anim-delay absolute w-10 h-10 rounded-full bg-saffron/10" style={{ top: "60%", left: "5%" }} />
-        <div className="float-anim absolute w-20 h-20 rounded-full border border-gold/20" style={{ top: "30%", right: "6%" }} />
-        <div className="float-anim-delay absolute w-8 h-8 rounded-full bg-gold/15" style={{ bottom: "30%", right: "10%" }} />
-        <div className="float-anim absolute w-12 h-12 rounded-full border border-white/10" style={{ bottom: "20%", left: "15%" }} />
+        {[
+          { left: "12%", size: 5, dur: 13, delay: 0 },
+          { left: "26%", size: 3, dur: 17, delay: 3 },
+          { left: "44%", size: 4, dur: 15, delay: 6 },
+          { left: "63%", size: 3, dur: 19, delay: 1.5 },
+          { left: "78%", size: 6, dur: 12, delay: 4.5 },
+          { left: "90%", size: 3, dur: 16, delay: 8 },
+        ].map((e, i) => (
+          <span
+            key={i}
+            className="ember absolute bottom-[18%] rounded-full bg-saffron/70"
+            style={{
+              left: e.left,
+              width: e.size,
+              height: e.size,
+              animationDuration: `${e.dur}s`,
+              animationDelay: `${e.delay}s`,
+              boxShadow: "0 0 8px 1px rgba(233,166,33,0.5)",
+            }}
+          />
+        ))}
       </div>
 
       {/* Content */}
@@ -62,9 +78,10 @@ export default function Hero() {
           <p className="text-saffron text-sm tracking-[0.5em] uppercase mb-3 font-medium">
             {t.hero_asian_dining}
           </p>
-          <h1 className="font-playfair text-[clamp(4rem,12vw,9rem)] font-bold text-white leading-none tracking-wider mb-4">
+          <h1 className="font-playfair text-[clamp(4rem,12vw,9rem)] font-bold text-white leading-none tracking-wider mb-3">
             KASIKA
           </h1>
+          <div className="draw-line mx-auto h-1 w-40 sm:w-56 rounded-full gold-gradient mb-2" />
         </motion.div>
 
         {/* Tagline */}

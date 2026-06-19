@@ -11,7 +11,7 @@ export default function Gallery() {
   const t = useT(lang);
 
   return (
-    <section id="gallery" className="py-24 bg-[#1A1A1A]">
+    <section id="gallery" className="py-24 bg-peacock-deep">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -21,7 +21,7 @@ export default function Gallery() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <p className="text-[#E6A817] text-xs tracking-[0.4em] uppercase font-semibold mb-3">
+          <p className="text-saffron text-xs tracking-[0.4em] uppercase font-semibold mb-3">
             {t.gallery_eyebrow}
           </p>
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white mb-4">
